@@ -1,0 +1,103 @@
+root { 
+    display: block;
+}
+
+#header{
+    position: relative;
+    float:left;
+    width: 60%;
+    height: 125px;  
+    margin-left: 20%;
+    margin-bottom: 40px;
+    background-color: sandybrown; 
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-repeat: repeat-y;
+    background: -moz-linear-gradient(left, goldenrod, sandybrown);
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+    
+}
+#idiomas a{
+    cursor: pointer;
+}
+.titulo{
+    font-weight: bold;
+}
+img.cabecera{
+    float:left;
+    height: 116px;
+    width: 155px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding:    5px;
+}
+p{
+    text-align: justify;
+}
+p.logo{
+    font-size: xx-large;
+    float:left;
+    height:  40px;
+    width: 200px;
+    position: relative;
+}
+p.sublogo{
+    font-size: larger;
+    left:   300px;
+    height:  40px;
+    width: 200px;
+    position: relative;
+    top:    -30px;
+}
+
+#principal{
+    position:relative;
+    float:left;   
+    margin-left:20%;
+    width: 60%;
+}
+#sidebar{
+    float: right;
+    position: relative;
+    margin-right: 5%;
+    top: -500px;
+}
+#idiomas{
+    float:right;
+    left: 85%;
+    position: absolute;
+    top:0;
+    list-style-type: none;
+    height: 100px;
+    width: 130px;
+}
+#evento{
+    position: relative;
+    float:left;
+    height: 400px;
+    width: 400px;
+    margin-left:20%;
+}
+
+.dc-social-float .tab {
+    cursor: pointer;
+    height: 38px;
+    margin-left: -1px;
+}
+.dc-social-float .dc-social-float-content {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px 0 0;
+    text-align: center;
+}
+.dc-social-float .dc-social-float-content {
+    border-radius: 5px; -webkit-border-radius: 5px;
+}
+.dcssb-btn {
+    margin-bottom: 5px;
+}
+#social.dc-social-float-content{
+    width: 80px;
+}
