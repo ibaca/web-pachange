@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+<head>
+<TITLE>Subscribe</TITLE>
+<META NAME="RESOURCE-TYPE" CONTENT="DOCUMENT">
+<META NAME="DISTRIBUTION" CONTENT="GLOBAL">
+<META NAME="AUTHOR" CONTENT="Anne Schutte">
+<META NAME="COPYRIGHT" CONTENT="Copyright (c) Pachange, Intercambios Oviedo">
+<META NAME="DESCRIPTION" CONTENT="Intercambios en Oviedo, para practicar Inglés, Frances, Español y muchos mas, de una manera divertida!">
+<META NAME="KEYWORDS" CONTENT="Intercambio, Intercambio, idiomas, idioma, languages, language practicing">
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<META NAME="REVISIT-AFTER" CONTENT="1 MONTH">
+<META NAME="RATING" CONTENT="GENERAL">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- header CSS-->
+<link href="../css/pachange_oviedo.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body style="background-image:url(offline/background.png); background-position:center; background-repeat:repeat;" >
+<div id="pagewidth" >
+  <div id="header" >
+     <table border="0" cellpadding="0" cellspacing="0" width="750">
+      <tr>
+        <td width="578" valign="top"><img src="img/oviedoindex.jpg" width="155" height="116"/><img src="offline/titulo_oviedo.jpg" width="397" height="116" /></td>
+        <td width="172"><div id="lang">
+            <p><a href="contactoviedo.php?lang=es" target="_self"> <img src="http://www.pachange.net/assets/bandera&#32;de&#32;espana.gif" width="20" height="12" /> Versi&oacute;n Espa&ntilde;ola</a></p>
+            <p><a href="contactoviedo.php?lang=en" target="_self"><img src="http://www.pachange.net/assets/bandera&#32;de&#32;inglaterra.gif" width="20" height="12" /> English Version</a></p>
+            <p><a href="contactoviedo.php?lang=de" target="_self"><img src="http://www.pachange.net/assets/bandera&#32;de&#32;alemania.gif" width="20" height="12" /> Deutsche Version</a></p>
+          </div></td>
+      </tr>
+    </table>
+    <h1 align="center">- Internationale Treffen von Sprachschülern -</h1>
+  </div>
+  <div id="maincol" class="clearfix" >
+
+
+
+
+
+
+
+<p><a href="index.php" target="_self">&lt;&lt;zurück</a></p>
+
+<blockquote>
+<div align="center" style="border-style:solid; border-width:1px; border-color:#CCCCCC; width:480px; background-color: #F5F5F5;">
+
+
+
+
+
+
+
+  <p>&nbsp;</p>
+
+
+
+    <table width="447" border="0" align="center" cellpadding="0" cellspacing="2">
+
+
+
+      <form method="post">
+
+
+
+        <tr>
+
+
+
+		<td colspan="2"><h2>:: Einschreibung für das nächste Treffen ::</h2>
+
+
+
+		<p>&nbsp;</p>
+
+
+
+		</td>
+
+
+
+		</tr>
+
+
+		<tr><td></td><td align="left">
+			<div align="center">
+			  <p align="left"><input name="casilla3" checked type="radio" value="Nuevo">
+			  Ich bin neu&nbsp;
+			  <input name="casilla3" type="radio" value="Ya registrado">
+			  Ich bin nicht neu&nbsp;
+		    </div></td></tr>
+		<tr>
+		  <td><p align="right"><b>Name, Nachname:</b>&nbsp;</p></td>
+          <td align="left"><input type="text" name="name" value="" size="38" maxlength="40" class="input">          </td>
+        </tr>
+
+       <tr>
+		<td><p align="right"><b>E-Mail:</b>&nbsp;</p></td>
+		 <td align="left"><input type="text" name="email" value="" size="38" maxlength="50" class="input">          </td>
+        </tr>
+	 <tr>
+		<td><p align="right"><b>Wiederhole deine Email:</b>&nbsp;</p></td>
+          <td align="left"><input type="text" name="repemail" value="" size="38" maxlength="50" class="input">          </td>
+        </tr>
+
+
+        <tr>
+		<td><p align="right"><b>Muttersprache:</b>&nbsp;</p></td>
+		<td align="left">
+		<table><td>
+							<select name="nationality" value="">
+							<option value="ES">Spanisch</option>
+							<option value="IN">Englisch</option>
+							<option value="AL">Deutsch</option>
+							<option value="FR">Französisch</option>
+							<option value="IT">Italienisch</option>
+							<option value="AR">Arabisch</option>
+							<option value="CH">Chinesisch</option>
+							<option value="DAN">Dänisch</option>
+							<option value="HO">Holändisch</option>
+							<option value="FIN">Finnisch</option>
+							<option value="GR">Griechisch</option>
+							<option value="HU">Ungarisch</option>
+							<option value="JA">Japanisch</option>
+							<option value="POL">Polnisch</option>
+							<option value="POR">Portugiesisch</option>
+							<option value="RU">Russisch</option>
+							<option value="SUE">Schwedisch</option>
+							<option value="TU">Türkisch</option>
+							</select>
+</td>
+<td>
+<p align="right"><b>Andere:</b>&nbsp;</p>
+</td>
+<td><input type="text" name="nationality2"  value="" value="" size="12" maxlength="50" class="input"></td></tr></table>
+		</td>
+        </tr>
+
+        <tr>
+		<td><p align="right"><b>Andere Sprachen, die du sehr gut sprichst:</b>&nbsp;</p></td>
+		<td align="left"><table>
+							<tr>
+								<td>
+							<select name="highlevelof1" value="">
+							<option value="">-</option>
+							<option value="IN">Englisch</option>
+							<option value="ES">Spanisch</option>
+							<option value="AL">Deutsch</option>
+							<option value="FR">Französisch</option>
+							<option value="IT">Italienisch</option>
+							<option value="AR">Arabisch</option>
+							<option value="CH">Chinesisch</option>
+							<option value="DAN">Dänisch</option>
+							<option value="HO">Holändisch</option>
+							<option value="FIN">Finnisch</option>
+							<option value="GR">Griechisch</option>
+							<option value="HU">Ungarisch</option>
+							<option value="JA">Japanisch</option>
+							<option value="POL">Polnisch</option>
+							<option value="POR">Portugiesisch</option>
+							<option value="RU">Russisch</option>
+							<option value="SUE">Schwedisch</option>
+							<option value="TU">Türkisch</option>
+							</select></td>
+						<td><select name="highlevelof2" value="">
+							<option value="">-</option>
+							<option value="AL">Deutsch</option>
+							<option value="IN">Englisch</option>
+							<option value="ES">Spanisch</option>
+							<option value="FR">Französisch</option>
+							<option value="IT">Italienisch</option>
+							<option value="AR">Arabisch</option>
+							<option value="CH">Chinesisch</option>
+							<option value="DAN">Dänisch</option>
+							<option value="HO">Holändisch</option>
+							<option value="FIN">Finnisch</option>
+							<option value="GR">Griechisch</option>
+							<option value="HU">Ungarisch</option>
+							<option value="JA">Japanisch</option>
+							<option value="POL">Polnisch</option>
+							<option value="POR">Portugiesisch</option>
+							<option value="RU">Russisch</option>
+							<option value="SUE">Schwedisch</option>
+							<option value="TU">Türkisch</option>
+							</select></td>
+						<td><input type="text" name="highlevelof3" value="" value="" size="8" maxlength="40" class="input" value="&#45;"></td>
+		</tr></table>
+        </tr>
+
+		<tr>
+
+
+
+		<td><p align="right"><b>Geburtsjahr:</b>&nbsp;</p></td>
+
+
+
+          <td align="left">
+				&nbsp;<select name="age" value="">
+			                  	<option>W&auml;hle...</option>
+								<option>1996</option>
+								<option>1995</option>
+								<option>1994</option>
+								<option>1993</option>
+								<option>1992</option>
+								<option>1991</option>
+								<option>1990</option>
+								<option>1989</option>
+								<option>1988</option>
+								<option>1987</option>
+								<option>1986</option>
+								<option>1985</option>
+								<option>1984</option>
+								<option>1983</option>
+								<option>1982</option>
+								<option>1981</option>
+								<option>1980</option>
+								<option>1979</option>
+								<option>1978</option>
+								<option>1977</option>
+								<option>1976</option>
+								<option>1975</option>
+								<option>1974</option>
+								<option>1973</option>
+								<option>1972</option>
+								<option>1971</option>
+								<option>1970</option>
+								<option>1969</option>
+								<option>1968</option>
+								<option>1967</option>
+								<option>1966</option>
+								<option>1965</option>
+								<option>1964</option>
+								<option>1963</option>
+								<option>1962</option>
+								<option>1961</option>
+								<option>1960</option>
+								<option>1959</option>
+								<option>1958</option>
+								<option>1957</option>
+								<option>1956</option>
+								<option>1955</option>
+								<option>1954</option>
+								<option>1953</option>
+								<option>1952</option>
+								<option>1951</option>
+								<option>1950</option>
+								<option>1949</option>
+								<option>1930</option>
+								<option>1947</option>
+								<option>1946</option>
+								<option>1945</option>
+								<option>1944</option>
+								<option>1943</option>
+								<option>1942</option>
+								<option>1941</option>
+								<option>1940</option>
+								<option>1939</option>
+								<option>1938</option>
+								<option>1937</option>
+								<option>1936</option>
+								<option>1935</option>
+								<option>1934</option>
+								<option>1933</option>
+								<option>1932</option>
+								<option>1931</option>
+								<option>1930</option>
+								<option>1929</option>
+								<option>1928</option>
+								<option>1927</option>
+								<option>1926</option>
+								<option>1925</option>
+								<option>1924</option>
+								<option>1923</option>
+								<option>1922</option>
+								<option>1921</option>
+								<option>1920</option>
+								<option>1919</option>
+								<option>1918</option>
+								<option>1917</option>
+								<option>1916</option>
+								<option>1915</option>
+								<option>1914</option>
+								<option>1913</option>
+								<option>1912</option>
+								<option>1911</option>
+							</select>
+</td>
+
+
+
+        </tr>
+</table>
+<table width="447" border="0" align="center" cellpadding="0" cellspacing="2">
+        <tr>
+		<td align="right">
+			<table>
+				<tr><td>&nbsp;</td></tr>
+				<tr><td><p align="right"><b>Sprache/n:</b>&nbsp;</p></td></tr>
+				<tr><td><p align="right"><b>Sprachniveau:</b>&nbsp;</p></td></tr>
+			</table>
+		</td>
+		<td>
+		<table>
+			<tr>
+				<td align="left"><br><p align="left"><b>Welche Sprache/n m&ouml;chtest du sprechen &uuml;ben?:</b></p></td></tr>
+			<tr>
+				<td align="left">
+				<table><tr><td>
+							<select name="practice1" value="">
+							<option value="ES">Spanisch</option>
+							<option value="IN">Englisch</option>
+							<option value="AL">Deutsch</option>
+							<option value="FR">Französisch</option>
+							<option value="IT">Italienisch</option>
+							<option value="AR">Arabisch</option>
+							<option value="CH">Chinesisch</option>
+							<option value="DAN">Dänisch</option>
+							<option value="HO">Holändisch</option>
+							<option value="FIN">Finnisch</option>
+							<option value="GR">Griechisch</option>
+							<option value="HU">Ungarisch</option>
+							<option value="JA">Japanisch</option>
+							<option value="POL">Polnisch</option>
+							<option value="POR">Portugiesisch</option>
+							<option value="RU">Russisch</option>
+							<option value="SUE">Schwedisch</option>
+							<option value="TU">Türkisch</option>
+							<option value="OTRO">Andere&#42;&#42;</option>
+							</select>
+				  </td>
+				<td align="left">
+							<select name="practice2" value="">
+							<option value="">-</option>
+							<option value="IN">Englisch</option>
+							<option value="ES">Spanisch</option>
+							<option value="AL">Deutsch</option>
+							<option value="FR">Französisch</option>
+							<option value="IT">Italienisch</option>
+							<option value="AR">Arabisch</option>
+							<option value="CH">Chinesisch</option>
+							<option value="DAN">Dänisch</option>
+							<option value="HO">Holändisch</option>
+							<option value="FIN">Finnisch</option>
+							<option value="GR">Griechisch</option>
+							<option value="HU">Ungarisch</option>
+							<option value="JA">Japanisch</option>
+							<option value="POL">Polnisch</option>
+							<option value="POR">Portugiesisch</option>
+							<option value="RU">Russisch</option>
+							<option value="SUE">Schwedisch</option>
+							<option value="TU">Türkisch</option>
+							<option value="OTRO">Andere&#42;&#42;</option>
+							</select>
+				</td>
+				<td align="left">
+							<select name="practice3" value="">
+							<option value="">-</option>
+							<option value="AL">Deutsch</option>
+							<option value="IN">Englisch</option>
+							<option value="ES">Spanisch</option>
+							<option value="FR">Französisch</option>
+							<option value="IT">Italienisch</option>
+							<option value="AR">Arabisch</option>
+							<option value="CH">Chinesisch</option>
+							<option value="DAN">Dänisch</option>
+							<option value="HO">Holändisch</option>
+							<option value="FIN">Finnisch</option>
+							<option value="GR">Griechisch</option>
+							<option value="HU">Ungarisch</option>
+							<option value="JA">Japanisch</option>
+							<option value="POL">Polnisch</option>
+							<option value="POR">Portugiesisch</option>
+							<option value="RU">Russisch</option>
+							<option value="SUE">Schwedisch</option>
+							<option value="TU">Türkisch</option>
+							<option value="OTRO">Andere&#42;&#42;</option>
+							</select>
+					</td></tr>
+<tr>
+						<td align="left"><select name="nivel1" value="">
+							<option value="B">Anfänger</option>
+							<option value="M">Mittelstufe</option>
+							<option value="A">Fortgeschritten</option>
+							</select>
+</td>
+						<td align="left"><select name="nivel2"  value="">
+							<option value="">-</option>
+							<option value="B">Anfänger</option>
+							<option value="M">Mittelstufe</option>
+							<option value="A">Fortgeschritten</option>
+							</select></td>
+						<td align="left"><select name="nivel3"  value="">
+							<option value="">-</option>
+							<option value="B">Anfänger</option>
+							<option value="M">Mittelstufe</option>
+							<option value="A">Fortgeschritten</option>
+							</select></td>
+		</tr>
+</table>
+</td></tr></table>
+		</td>
+		</tr>
+
+</table>
+  <table border="0" cellpadding="0" cellspacing="0" align="center">
+		<tr>
+		<td><p align="right"><b>Wie bist du auf Pachange gekommen? &#47; Andere Kommentare:</b></p></td>
+      <td><br><textarea name="comment" cols="38" rows="5" type="text" value=""></textarea>
+
+	</td>
+
+
+
+        </tr>
+
+
+
+        <tr>
+
+
+
+		<td colspan="2">&nbsp;</td>
+
+
+
+        </tr>
+
+
+
+        <tr>
+
+
+
+		<td colspan="2" align="center"><input type="reset" value="Daten l&ouml;schen" class="input">
+
+
+
+          <input type="submit" name="mail" value="Senden" class="input">          </td>
+
+
+
+        </tr>
+
+
+
+        <tr>
+
+
+
+		<td colspan="2" align="center"><p>&nbsp;</p><p>&nbsp;</p>
+
+
+
+		 <blockquote> <p> Es müssen alle Felder ausgefüllt werden, damit deine Einschreibung gültig ist. Mit deiner Einschreibung akzeptierst Du, an dem angekündigten Treffen teilzunehmen, uns Bescheid zu geben, wenn du nicht teilnehmen kannst und am Tag des Treffen mit der Gruppe und deinem Austauschpartner in das, von den Organisierern vorgeschlagene Lokal zu gehen. Wird dies nicht eingehalten, kann die Teilnahme in späteren Treffen verweigert werden. Wir werden dir eine Bestätigungsemail schicken. Wenn du diese nicht erhälst, hei&szlig;t das, da&szlig; du auf unserer Warteliste stehst und es im Moment keine freien Plätze gibt. Bitte beachte, da&szlig; es normalerweise immer freie Plätze für Ausländer gibt. </p><br><br>
+			<p>&#42;&#42;Bitte im Kommentarfeld angeben</p></blockquote>
+</td>
+
+
+
+        </tr>
+
+
+
+      </form>
+
+
+
+</table>
+
+
+
+<p>&nbsp;</p>
+
+
+
+	<p>&nbsp;</p>
+
+
+
+ </div>
+</blockquote>
+
+
+  <p>&nbsp;</p>
+
+
+
+ <p>&nbsp;</p>
+
+
+
+   
+
+
+  </div>
+
+
+
+  <div id="footer" >
+
+    <div align="center">
+
+
+      <h6><span class="orange">Copyright </span>&copy;2011, <a href="../index.html" target="_self" class="greylink">pachange.net</a>. - Alle Rechte sind reserviert -</h6>
+
+    </div>
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
