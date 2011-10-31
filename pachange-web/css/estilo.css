@@ -92,10 +92,10 @@ p.sublogo {
     border: 3px ridge #ACCFE8;
     float: right;
     font: 80% "Trebuchet MS",Arial,Helvetica,sans-serif;
-    margin-right: 15%;
+    margin-right: 10%;
     position: relative;
     top: -550px;
-    width: 150px;
+    width: 200px;
 }
 #sidebar ul, li {
     list-style-type: none;
@@ -113,15 +113,16 @@ p.sublogo {
     display: block;
     padding: 3px 6px;
     text-decoration: none;
-    width: 138px;
+    margin:  5px;
 }
 #sidebar h3 {
+    background: #608FFF;
     border: 1px dotted #ACCFE8;
     cursor: pointer;
     margin: 5px;
 }
 #sidebar a:hover {
-    background: none repeat scroll 0 0 #DBEBF6;
+    background: none repeat scroll 0 0 #ACCFE8;
 }
 #sidebar h3:hover {
     background: none repeat scroll 0 0 cornflowerblue;
