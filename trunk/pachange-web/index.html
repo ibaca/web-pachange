@@ -21,6 +21,8 @@
                                     break;
                 }
             }
+            
+            
             $(document).ready(function(){
                 jQuery.getJSON("http://www.google.com/calendar/feeds/q1r3n14vi5icbv00ta1pjpinhc%40group.calendar.google.com/public/full?alt=json", function(data)
                 {
@@ -133,7 +135,28 @@ $("#sidebar h3").bind("click", function() {
                         <li><a href="http://cafetemalak.es/">Tetería Malak</a></li>
                 </ul>
                 </div>
-                
+                <div id="busqueda">
+                    <h3>Buscar</h3>
+                    <!-- SiteSearch Google -->
+                    <FORM method=GET action="http://www.google.com/search">
+                    <input type=hidden name=ie value=UTF-8>
+                    <input type=hidden name=oe value=UTF-8>
+                    <TABLE bgcolor="#FFFFFF"><tr>
+                    <td>
+                    <INPUT TYPE=text name=q size=15 maxlength=255 value="">
+                    <INPUT type=submit name=btnG VALUE="Buscar">
+                    <font size=-1> 
+                    <input type=hidden name=domains value="http://www.pachange.net">
+                    <br>
+                    <input type=radio name=sitesearch value="">Web
+                    <input type=radio name=sitesearch value="www.pachange.net" checked>
+                    pachange <br>
+                    </font> 
+                    </td>
+                    </tr></TABLE>
+                    </FORM>
+                    <!-- SiteSearch Google -->
+                </div>
         </div>
          <div id="social"></div>
 
