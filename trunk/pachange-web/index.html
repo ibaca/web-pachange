@@ -52,7 +52,16 @@
                     speedFloat: 1600,
                     disableFloat: true
                 });    
-             })
+        $("#sidebar div.content").hide();
+$("#sidebar div.content:first").show();
+$("#sidebar h3").bind("click", function() {
+  if ( $(this).next().css("display") == 'none' ) {
+    $("#sidebar div.content").hide();
+    $(this).next().slideDown("slow");
+  }
+});     
+         
+        })
                  
            
         </script>
@@ -103,27 +112,28 @@
         </div>  
         <div id="evento"></div>
         <div id="sidebar">
-                <h3><a href="#">Menu1</a></h3>
-                <div><ul><li>primero</li><li>segundo</li><li>tercero</li></ul></div>
-                <h3><a href="#">Enlaces</a></h3>
-                <div><ul><li>primero</li><li>segundo</li><li>tercero</li></ul></div>
-                         <!-- AddToAny BEGIN -->
-         <div id="footer">
-         <div class="a2a_kit a2a_default_style">
-        <a class="a2a_dd" href="http://www.addtoany.com/share_save">Compartir</a>
-        <span class="a2a_divider"></span>
-        <a class="a2a_button_facebook"></a>
-        <a class="a2a_button_twitter"></a>
-        <a class="a2a_button_email"></a>
-        </div>
-        <script type="text/javascript">
-            var a2a_config = a2a_config || {};
-            a2a_config.locale = "es";
-            a2a_config.prioritize = ["email", "facebook", "meneame", "tuenti", "twitter", "digg"];
-        </script>
-        <script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
-        <!-- AddToAny END -->
-         </div>
+                <h3>Enlaces</h3>
+                <div class="content">
+                <ul class="enlaces">
+                        <li><a href="http://www.facebook.com/group.php?gid=25897235288&ref=mf" target="_blank">Grupo Pachange en Facebook</a></li>
+                        <li><a href="http://es.youtube.com/results?search_query=pachange&search=Buscar" target="_blank">Pachange en YouTube</a></li>
+                        <li><a href="http://www.tu.tv/videos/pachange-reportaje-malaga" target="_blank">Pachange en tu.tv</a></li>
+                        <li><a href="http://blogchange.pachange.net" target="_blank">Blogchange</a></li>
+                </ul>
+                </div>
+
+                <h3>Nuestros colaboradores</h3>
+                <div class="content">
+                <ul class="Nuestros colaboradores">
+                        <li><a href="http://www.malaga-si.es/" >Escuela Málaga ¡Sí!</a></li>
+                        <li><a href="http://www.instituto-andalusi.com/">Instituto Andalusí</a></li>
+                        <li><a href="http://www.aifp.org/">Spanish in Spain AIFP</a></li>
+                        <li><a href="http://www.deutsch-schule.com/">Alemán en Málaga Deutsch-Schule</a></li>
+                        <li><a href="http://www.tvspain.tv/video_details.php?id=45">Tetería el Harén</a></li>
+                        <li><a href="http://cafetemalak.es/">Tetería Malak</a></li>
+                </ul>
+                </div>
+                
         </div>
          <div id="social"></div>
 
