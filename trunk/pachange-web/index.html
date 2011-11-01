@@ -11,7 +11,48 @@
         <script src="js/jquery.social.share.1.1.js"></script>
         
         <script>
+            function checkmail(formulario){
+                var x = document.forms["formulario"]["email"].value;
+                var y = document.forms["formulario"]["email2"].value
+                if (x != y) {
+                    formulario.setCustomValidity('Las dos direcciones de e-mail no coinciden');
+                } 
+                else {
+                    formulario.setCustomValidity('');
+                }
+        
+            }
+            function cargarmapa(){
+                $("#principal").toggleClass('evento');
+                jQuery.getJSON("http://www.google.com/calendar/feeds/q1r3n14vi5icbv00ta1pjpinhc%40group.calendar.google.com/public/full?alt=json", function(data)
+                {
+                  var fecha=data.feed.entry[0].gd$when[0].startTime.substring(8,10) + 
+                      "-" + data.feed.entry[0].gd$when[0].startTime.substring(5,7) + "-" +   
+                      data.feed.entry[0].gd$when[0].startTime.substring(0,4);
+                  var hora= data.feed.entry[0].gd$when[0].startTime.substring(11,16);
+                  $("#principal").gMap({
+                      markers: [{
+                                address: data.feed.entry[0].gd$where[0].valueString, 
+                                html: data.feed.entry[0].gd$where[0].valueString + "<br/>"+ fecha + "<br/>" + hora,
+                                popup:true
+                                }
+                                ] , 
+                      zoom:13
+                  });}
+                 );
+            }
+            
+            function cargarformulario(){
+                $("#principal").toggleClass('evento');
+                $("#principal").removeAttr('class');
+                $("#principal").removeAttr('style');
+                $.ajax({url:'formulario.html', success: function(data){$('#principal').html(data);}}); 
+             }
             function idioma(l){
+                $("#principal").toggleClass('evento');
+                $("#principal").removeAttr('class');
+                $("#principal").removeAttr('style');
+                //$("#principal").toggleClass('principal');
                 switch(l){
                     case 'ingles' : $.ajax({url:'ingles.html', success: function(data){$('#principal').html(data);}}); 
                                     break;
@@ -24,21 +65,6 @@
             
             
             $(document).ready(function(){
-                jQuery.getJSON("http://www.google.com/calendar/feeds/q1r3n14vi5icbv00ta1pjpinhc%40group.calendar.google.com/public/full?alt=json", function(data)
-                {
-                  var html="";  
-                  var fecha=data.feed.entry[0].gd$when[0].startTime.substring(8,10) + 
-                      "-" + data.feed.entry[0].gd$when[0].startTime.substring(5,7) + "-" +   
-                      data.feed.entry[0].gd$when[0].startTime.substring(0,4);
-                  var hora= data.feed.entry[0].gd$when[0].startTime.substring(11,16);
-                  $("#evento").gMap({
-                      markers: [{
-                                address: data.feed.entry[0].gd$where[0].valueString, 
-                                html: data.feed.entry[0].gd$where[0].valueString + "<br/>"+ fecha + "<br/>" + hora}
-                                ] , 
-                      zoom:13
-                  });}
-                 );
                 $('#social').dcSocialShare({
                     buttons: "twitter,facebook,plusone",
                     location: 'top',
@@ -109,11 +135,15 @@ $("#sidebar h3").bind("click", function() {
                - Organizado por estudiantes de idiomas para estudiantes de idiomas - 
             </p>
             <hr>
-            
-            <h2>Próximo evento:</h2> 
         </div>  
-        <div id="evento"></div>
         <div id="sidebar">
+            <h3>Próximo encuentro</h3>   
+            <div class="content">
+                <ul>
+                    <li class="datosevento"><a href="#" onclick="cargarmapa()">Datos del encuentro</a></li>
+                    <li class="inscripcion"><a href="#" onclick="cargarformulario()">Inscripción</a></li>
+                </ul>
+                </div>
                 <h3>Enlaces</h3>
                 <div class="content">
                 <ul class="enlaces">
@@ -157,7 +187,12 @@ $("#sidebar h3").bind("click", function() {
                     </FORM>
                     <!-- SiteSearch Google -->
                 </div>
-        </div>
+        
+            <div id="publicidad">
+                <img src="img/banner1.gif" />
+                <img src="img/banner2.gif" />
+                </div>
+            </div>
          <div id="social"></div>
 
    </body>
