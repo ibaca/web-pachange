@@ -1,0 +1,35 @@
+p span { color: darkred; } 
+p:first-letter { font-weight: bold; }
+
+p {position:relative;}
+p:hover:after { 
+    position: absolute;
+    display: block;
+    bottom: 1.5em;
+    background-color: lightgray;
+    content: contents; 
+}
+
+#index { list-style: none; }
+#index > li:before {
+    display: block;
+    float: left;
+    margin: 5px;
+    content: "";
+    top: 5px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid green;
+}
+
+:target {
+    animation-name: 'hilight';
+    animation-duration: 5s;
+}
+
+.sidebar {
+    margin-top: 20px;
+    position: fixed;
+}
