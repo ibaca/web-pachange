@@ -1,11 +1,9 @@
-/*body {
-    font-family:Lucida Sans,Lucida Grande,Arial,sans-serif;
-    margin:0;
-    line-height:22px;
-    width:960px;
-    margin:0 auto;
-}*/
-
+/* Pachange */
+.page-header {
+  background-image: url("images/page-header-background.png");
+  background-position: right;
+  background-repeat: no-repeat;
+}
 
 /* Override some defaults */
 html, body {
@@ -18,7 +16,7 @@ body {
   text-align: center; /* center align it with the container */
 }
 .container {
-  width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+  width: 960px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
 }
 
 /* The white background content wrapper */
@@ -85,4 +83,10 @@ body {
 /* Form Adjustments */
 .input-small, input.small, textarea.small, select.small {
   width: 98px;
+}
+
+/* Gmaps Style */
+.gmaps-container {
+  width: 100%;
+  height: 450px;
 }

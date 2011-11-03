@@ -23,107 +23,8 @@
     <script type="text/javascript" src="jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="bootstrap/bootstrap-tabs.js"></script>
     
-    <script type="text/javascript" src="jquery.youtube.channel.js"></script>
-   
-    <script type="text/javascript" src="youtube.channel.css"></script>
-    
-    <script>
-       function cargarVideo(){
-           $.ajax({url:'videos.html', success: function(data){
-                   $('#principal').html(data);
-                   $('#principal').youTubeChannel({ 
-               //Cambiar el nombre de usuario a pachange
-                        userName: 'Fernan180',
-                        hideNumberOfRatings: false,
-                  removeBordersFromImage: false,
-                    loadingText: "Loading...",
-                  linksInNewWindow: false,
-                   hideVideoLength: false,
-                    hideFrom: false,
-                 hideViews: false,
-                 hideRating: false
-            }); 
-            }           
-           });
-       }
-      function checkmail(formulario){
-        var x = document.forms["formulario"]["email"].value;
-        var y = document.forms["formulario"]["email2"].value
-        if (x != y) {
-          formulario.setCustomValidity('Las dos direcciones de e-mail no coinciden');
-        } 
-        else {
-          formulario.setCustomValidity('');
-        }
-        
-      }
-      function cargarmapa(){
-        $("#principal").toggleClass('evento');
-        jQuery.getJSON("http://www.google.com/calendar/feeds/q1r3n14vi5icbv00ta1pjpinhc%40group.calendar.google.com/public/full?alt=json", function(data)
-        {
-          var fecha=data.feed.entry[0].gd$when[0].startTime.substring(8,10) + 
-            "-" + data.feed.entry[0].gd$when[0].startTime.substring(5,7) + "-" +   
-            data.feed.entry[0].gd$when[0].startTime.substring(0,4);
-          var hora= data.feed.entry[0].gd$when[0].startTime.substring(11,16);
-          $("#principal").gMap({
-            markers: [{
-                address: data.feed.entry[0].gd$where[0].valueString, 
-                html: data.feed.entry[0].gd$where[0].valueString + "<br/>"+ fecha + "<br/>" + hora,
-                popup:true
-              }
-            ] , 
-            zoom:13
-          });}
-      );
-      }
-            
-      function idioma(l){
-        $("#principal").toggleClass('evento');
-        $("#principal").removeAttr('class');
-        $("#principal").removeAttr('style');
-        //$("#principal").toggleClass('principal');
-        switch(l){
-          case 'ingles' : $.ajax({url:'ingles.html', success: function(data){$('#principal').html(data);}}); 
-            break;
-          case 'español': $.ajax({url:'español.html', success: function(data){$('#principal').html(data);}}); 
-            break;
-          case 'aleman':  $.ajax({url:'aleman.html', success: function(data){$('#principal').html(data);}}); 
-            break;
-        }
-      }
-            
-            
-      $(document).ready(function(){
-       
-        $("#sidebar div.content").hide();
-        $("#sidebar div.content:first").show();
-        $("#sidebar h3").bind("click", function() {
-          if ( $(this).next().css("display") == 'none' ) {
-            $("#sidebar div.content").hide();
-            $(this).next().slideDown("slow");
-          }
-        });     
-         
-      })
-      
-      // Load Local/Global Menu Pills
-      $(function(){ 
-        $("#global-menu").tabs();
-        $("#local-menu").pills(); 
-        
-        // Local menu [ info | map | subscription ]
-        $("#local-menu").live("change", function(event){
-          fromTab = $(event.relatedTarget).parent().attr("id");
-          toTab = $(event.target).parent().attr("id");
-          if (toTab == "info") {   }
-          if (toTab == "map") {  cargarmapa() }
-          if (toTab == "subscription") { $("#principal").load("partials/subscription.html"); }
-          if (toTab == "videos") { $("#principal").load("partials/videos.html"); }
-        });
-      });
-                 
-           
-    </script>
+    <!-- Script Pachange -->
+    <script type="text/javascript" src="pachange.js"></script>
 
   </head> 
   <body>
@@ -172,37 +73,8 @@
 
         <div class="row">
 
-          <div id="principal"  class="span10">
-            <h2>Creadoras</h2>
-            <p>Ana Isabel Angulo Delgado Franziska Arndt</p>
-
-            <h2>Sobre nosotras</h2>
-            <p>Ana es Arquitecta de Interiores por la Escuela de Artes San Telmo
-              y estudia Bellas Artes en la Universidad de Málaga. Franziska 
-              (Paqui) es licenciada en LADE por la Facultad de Económicas y 
-              Empresariales de Málaga y está creando su propia agencia de 
-              viajes de idiomas.
-            </p>
-
-            <h2>Colaboradores</h2>
-            <p>Gabriel Pérez (fotógrafo), David Valero (Post Pachange).</p>
-
-            <h2>¿Cómo funciona?</h2>
-            <p>Solemos quedar cada semana, los jueves o viernes, a las 20h. 
-              En el punto de encuentro asignamos las parejas de intercambio 
-              (un estudiante extranjero con un estudiante español), 
-              luego vamos todos juntos a un lugar tranquilo donde se habla 
-              aproximadamente una hora en español y una hora en un idioma 
-              extranjero (inglés, italiano, alemán, francés, etc.). 
-              Un encuentro dura más o menos hasta las 23h. Se cobrará 1€ por 
-              asistente apuntado que venga o que no venga sin avisar al 
-              encuentro para ayudarnos con nuestros gastos y que podamos 
-              seguir mejorando la actividad Pachange :) 
-            </p>
-            <p>Pachange: encuentros de intercambio de idiomas para extranjeros y españoles.<br />
-              Organizado por estudiantes de idiomas para estudiantes de idiomas
-            </p>
-            <hr>
+          <div id="principal"  class="span12">
+            <!-- dynamically generated -->
           </div>
 
            <!--<li id="videos"><a href="#malaga/videos">Videos</a></li>-->
@@ -210,10 +82,10 @@
 
             <h3>Menú Málaga</h3>   
             <ul id="local-menu" class="pills">
-              <li id="info" class="active"><a href="#malaga/info">Información General</a></li>
-              <li id="map"><a href="#malaga/map">Lugar</a></li>
-              <li id="subscription"><a href="#malaga/subscription">Inscripción</a></li>
-              <li id="videos"><a href="#" onclick="cargarVideo()">Videos</a></li>
+              <li id="info-partial"><a href="#malaga/info">Información General</a></li>
+              <li id="map-partial"><a href="#malaga/map">Lugar</a></li>
+              <li id="subscription-partial"><a href="#malaga/subscription">Inscripción</a></li>
+              <li id="videos-partial"><a href="#malaga/videos">Videos</a></li>
             </ul>
             <hr />
 
@@ -239,8 +111,8 @@
 
             <h3>Publicidad</h3>
             <ul class="unstyled">
-              <li><img src="banner1.gif" /></li>
-              <li><img src="banner2.gif" /></li>
+              <li><img alt="anuncio" src="images/banner1.gif" /></li>
+              <li><img alt="anuncio" src="images/banner2.gif" /></li>
             </ul>
 
           </div><!-- sidebar -->
