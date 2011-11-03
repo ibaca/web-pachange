@@ -170,3 +170,30 @@ p.sublogo {
   background:none;
   padding:10px;
 }
+#pollo{
+    width: 30%;
+    height: 30%;
+    background: none repeat scroll 0 0 white;
+    margin-left:10%;
+}
+
+#pollo a{
+    width: 30%;
+    height: 30%;
+    background: none repeat scroll 0 0 white;
+}
+#facebook a{
+    float:left;
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    background: none repeat scroll 0 0 white;
+    color:white;
+}
+#plusone{
+    margin-left: 30px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    
+}
