@@ -21,10 +21,31 @@
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="gmap.js"></script>
     <script type="text/javascript" src="jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="jquery.social.share.1.1.js"></script>
     <script type="text/javascript" src="bootstrap/bootstrap-tabs.js"></script>
-
+    
+    <script type="text/javascript" src="jquery.youtube.channel.js"></script>
+   
+    <script type="text/javascript" src="youtube.channel.css"></script>
+    
     <script>
+       function cargarVideo(){
+           $.ajax({url:'videos.html', success: function(data){
+                   $('#principal').html(data);
+                   $('#principal').youTubeChannel({ 
+               //Cambiar el nombre de usuario a pachange
+                        userName: 'Fernan180',
+                        hideNumberOfRatings: false,
+                  removeBordersFromImage: false,
+                    loadingText: "Loading...",
+                  linksInNewWindow: false,
+                   hideVideoLength: false,
+                    hideFrom: false,
+                 hideViews: false,
+                 hideRating: false
+            }); 
+            }           
+           });
+       }
       function checkmail(formulario){
         var x = document.forms["formulario"]["email"].value;
         var y = document.forms["formulario"]["email2"].value
@@ -73,21 +94,7 @@
             
             
       $(document).ready(function(){
-        $('#social').dcSocialShare({
-          buttons: "twitter,facebook,plusone",
-          location: 'top',
-          align: 'left',
-          offsetLocation: 50,
-          offsetAlign: 30,
-          tabText: '',
-          width: 120,
-          center: true,
-          centerPx: 577,
-          size:   "vertical",
-          speedContent: 600,
-          speedFloat: 1600,
-          disableFloat: true
-        });    
+       
         $("#sidebar div.content").hide();
         $("#sidebar div.content:first").show();
         $("#sidebar h3").bind("click", function() {
@@ -206,7 +213,7 @@
               <li id="info" class="active"><a href="#malaga/info">Información General</a></li>
               <li id="map"><a href="#malaga/map">Lugar</a></li>
               <li id="subscription"><a href="#malaga/subscription">Inscripción</a></li>
-              <li id="videos"><a href="#malaga/videos">Videos</a></li>
+              <li id="videos"><a href="#" onclick="cargarVideo()">Videos</a></li>
             </ul>
             <hr />
 
