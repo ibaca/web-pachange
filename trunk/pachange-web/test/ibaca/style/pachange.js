@@ -99,29 +99,29 @@ function cargarVideo(){
             
             
   $(document).ready(function(){
-    $('#social').dcSocialShare({
-      buttons: "twitter,facebook,plusone",
-      location: 'top',
-      align: 'left',
-      offsetLocation: 50,
-      offsetAlign: 30,
-      tabText: '',
-      width: 120,
-      center: true,
-      centerPx: 577,
-      size:   "vertical",
-      speedContent: 600,
-      speedFloat: 1600,
-      disableFloat: true
-    });    
-    $("#sidebar div.content").hide();
-    $("#sidebar div.content:first").show();
-    $("#sidebar h3").bind("click", function() {
-      if ( $(this).next().css("display") == 'none' ) {
-        $("#sidebar div.content").hide();
-        $(this).next().slideDown("slow");
-      }
-    });     
+//    $('#social').dcSocialShare({
+//      buttons: "twitter,facebook,plusone",
+//      location: 'top',
+//      align: 'left',
+//      offsetLocation: 50,
+//      offsetAlign: 30,
+//      tabText: '',
+//      width: 120,
+//      center: true,
+//      centerPx: 577,
+//      size:   "vertical",
+//      speedContent: 600,
+//      speedFloat: 1600,
+//      disableFloat: true
+//    });    
+//    $("#sidebar div.content").hide();
+//    $("#sidebar div.content:first").show();
+//    $("#sidebar h3").bind("click", function() {
+//      if ( $(this).next().css("display") == 'none' ) {
+//        $("#sidebar div.content").hide();
+//        $(this).next().slideDown("slow");
+//      }
+//    });     
          
   })
       
