@@ -1,114 +1,121 @@
-subscription.html
-
 <!-- Inscripciónsiguiente al siguiente evento -->
-<form name="formulario">
-
-  <datalist id="countries">
-    <option value="Español"></option>
-    <option value="Inglés"></option>
-    <option value="Alemán"></option>
-    <option value="Frances"></option>
-    <option value="Italiano"></option>
-    <option value="Árabe"></option>
-    <option value="Chino"></option>
-    <option value="Danés"></option>
-    <option value="Holandés"></option>
-    <option value="Finlandés"></option>
-    <option value="Griego"></option>
-    <option value="Húngaro"></option>
-    <option value="Japonés"></option>
-    <option value="Polaco"></option>
-    <option value="Portugués"></option>
-    <option value="Ruso"></option>
-    <option value="Suecia"></option>
-    <option value="Turco"></option>
-  </datalist>
-  <datalist id="niveles">
-    <option value="bajo"></option>
-    <option value="intermedio"></option>
-    <option value="alto"></option>
-  </datalist>
-
-  <fieldset>
-    <legend>Datos de contacto</legend>
-
-    <div class="clearfix">
-      <label>Nombre</label>
-      <div class="input"><input name="nombre" placeholder="nombre" required /></div>
-    </div>
-
-    <div class="clearfix">
-      <label>Apellidos</label>
-      <div class="input"><input name="apellidos" placeholder="apellidos" required /></div>
-    </div>
-
-    <div class="clearfix">
-      <label>E-mail</label>
-      <div class="input"><input name="email" type="email" placeholder="usuario@servidor.com" required /></div>
-    </div>
-
-    <div class="clearfix">
-      <label>Repite tu e-mail</label>
-      <div class="input"><input name="email2" type="email" placeholder="usuario@servidor.com" required oninput="checkmail(this)" /></div>
-    </div>
-
-    <div class="clearfix">
-      <label>Fecha de nacimiento</label>
-      <div class="input"><input name="nacimiento" type="date" /></div>
-    </div>
-
-    <div class="clearfix">
-      <label>Idioma nativo</label>
-      <div class="input">
-        <input type="text" name="nativo"  list="countries" />
-      </div>
-    </div>
-
-    <div class="clearfix"> 
-      <label>Idiomas con los que ofreces nivel alto</label>
-      <div class="input">
-        <input type="text" name="alto1" list="countries" />   
-        <input type="text" name="alto2"   list="countries" /> 
-      </div>
-    </div>
-
-    <div class="clearfix">
-      <label>Idiomas a practicar/Nivel</label>
-      <div class="input">
-        <input class="small" type="text" name="practicar1" list="countries" /> 
-        <input class="small" type="text" name="nivel1" list="niveles" />  
-        <br/>
-
-        <input class="small" type="text" name="practicar2" list="countries" /> 
-        <input class="small" type="text" name="nivel2" list="niveles" />  
-        <br/>
-
-        <input class="small" type="text" name="practicar3" list="countries" /> 
-        <input class="small" type="text" name="nivel3" list="niveles" /> 
-        <br/>
-      </div>
-    </div>
-
-    <div class="clearfix">
-      <label>¿Cómo has conocido Pachange? / Otros comentarios</label>
-      <div class="input">
-        <textarea name="comentarios" placeholder="Comentarios,opiniones..."></textarea><br/>
-      </div>
-    </div>
-
-    <div class="actions">
-      <input class="btn primary" type="button" name="submit" value="Enviar" />
-      <input class="btn" type="reset" value="Cancelar"/>
-    </div>
-  </fieldset>
+<form name="formulario" class="form-stacked">
+	<datalist id="countries">
+		<option value="Español"></option>
+		<option value="Inglés"></option>
+		<option value="Alemán"></option>
+		<option value="Frances"></option>
+		<option value="Italiano"></option>
+		<option value="Árabe"></option>
+		<option value="Chino"></option>
+		<option value="Danés"></option>
+		<option value="Holandés"></option>
+		<option value="Finlandés"></option>
+		<option value="Griego"></option>
+		<option value="Húngaro"></option>
+		<option value="Japonés"></option>
+		<option value="Polaco"></option>
+		<option value="Portugués"></option>
+		<option value="Ruso"></option>
+		<option value="Suecia"></option>
+		<option value="Turco"></option>
+	</datalist>
+	<datalist id="niveles">
+		<option value="bajo"></option>
+		<option value="intermedio"></option>
+		<option value="alto"></option>
+	</datalist>
+	<div class="row">
+		<div class="span6">
+			<fieldset>
+				<legend>
+					Datos de contacto
+				</legend>
+				<div class="clearfix">
+					<label>Nombre</label>
+					<div class="input">
+						<input name="nombre" placeholder="nombre" required />
+					</div>
+				</div>
+				<div class="clearfix">
+					<label>Apellidos</label>
+					<div class="input">
+						<input name="apellidos" placeholder="apellidos" required />
+					</div>
+				</div>
+				<div class="clearfix">
+					<label>E-mail</label>
+					<div class="input">
+						<input name="email" type="email" placeholder="usuario@servidor.com" required />
+					</div>
+				</div>
+				<div class="clearfix">
+					<label>Repite tu e-mail</label>
+					<div class="input">
+						<input name="email2" type="email" placeholder="usuario@servidor.com" required oninput="checkmail(this)" />
+					</div>
+				</div>
+				<div class="clearfix">
+					<label>Fecha de nacimiento</label>
+					<div class="input">
+						<input name="nacimiento" type="date" />
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="span5">
+			<fieldset>
+				<legend>
+					Nivel de Idiomas
+				</legend>
+				<div class="clearfix">
+					<label>Idioma nativo</label>
+					<div class="input">
+						<input type="text" name="nativo"  list="countries" />
+					</div>
+				</div>
+				<div class="clearfix">
+					<label>Idiomas con los que ofreces nivel alto</label>
+					<div class="input">
+						<input class="small" type="text" name="alto1" list="countries" />
+						<input class="small" type="text" name="alto2"   list="countries" />
+					</div>
+				</div>
+				<div class="clearfix">
+					<label>Idiomas a practicar/Nivel</label>
+					<div class="input">
+						<input class="small" type="text" name="practicar1" list="countries" />
+						<input class="small" type="text" name="nivel1" list="niveles" />
+						<br/>
+						<input class="small" type="text" name="practicar2" list="countries" />
+						<input class="small" type="text" name="nivel2" list="niveles" />
+						<br/>
+						<input class="small" type="text" name="practicar3" list="countries" />
+						<input class="small" type="text" name="nivel3" list="niveles" />
+						<br/>
+					</div>
+				</div>
+				<div class="clearfix">
+					<label>¿Cómo has conocido Pachange? / Otros comentarios</label>
+					<div class="input">
+						<textarea name="comentarios" placeholder="Comentarios,opiniones..."></textarea>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+	<div class="actions">
+		<input class="btn primary" type="button" name="submit" value="Enviar" />
+		<input class="btn" type="reset" value="Cancelar"/>
+	</div>
 </form>
-
-<p>Es necesario rellenar todas las casillas para que tu inscripción sea válida. 
-  Al inscribirte aceptas participar en el encuentro anunciado, avisarnos en 
-  el caso de que no puedas asistir e ir conjuntamente con todo el grupo y
-  tu pareja de intercambio al sitio indicado por las organizadoras. En 
-  caso contrario, nos reservamos el derecho de la no admisión en posteriores 
-  encuentros. Recibirás un email donde te confirmamos que tienes plaza para 
-  el encuentro. Si no recibes confirmación de nosotros, no estás admitid@ y 
-  estás en lista de espera.
+<p>
+	Es necesario rellenar todas las casillas para que tu inscripción sea válida.
+	Al inscribirte aceptas participar en el encuentro anunciado, avisarnos en
+	el caso de que no puedas asistir e ir conjuntamente con todo el grupo y
+	tu pareja de intercambio al sitio indicado por las organizadoras. En
+	caso contrario, nos reservamos el derecho de la no admisión en posteriores
+	encuentros. Recibirás un email donde te confirmamos que tienes plaza para
+	el encuentro. Si no recibes confirmación de nosotros, no estás admitid@ y
+	estás en lista de espera.
 </p>
