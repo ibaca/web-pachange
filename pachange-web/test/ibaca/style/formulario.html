@@ -1,0 +1,57 @@
+<form name="formulario">
+    <fieldset>
+        <legend>
+            Inscripción para el siguiente evento:
+        </legend>
+        Nombre <span class="rojo">* </span><input name="nombre" placeholder="nombre" required /> <br/>
+        Apellidos <span class="rojo">* </span><input name="apellidos" placeholder="apellidos" required /><br/>
+        E-mail <span class="rojo">* </span><input name="email" type="email" placeholder="usuario@servidor.com" required /><br/>
+        Repite tu e-mail <span class="rojo">* </span><input name="email2" type="email" placeholder="usuario@servidor.com" required oninput="checkmail(this)" /><br/>
+        Fecha de nacimiento: <input name="nacimiento" type="date" /> <br/>
+       
+        <br/>
+        Idioma nativo:<input type="text" name="nativo" size="10" list="countries" /> 
+            <datalist id="countries">
+		<option value="Español"></option>
+		<option value="Inglés"></option>
+		<option value="Alemán"></option>
+		<option value="Frances"></option>
+		<option value="Italiano"></option>
+		<option value="Árabe"></option>
+		<option value="Chino"></option>
+		<option value="Danés"></option>
+		<option value="Holandés"></option>
+		<option value="Finlandés"></option>
+		<option value="Griego"></option>
+		<option value="Húngaro"></option>
+		<option value="Japonés"></option>
+		<option value="Polaco"></option>
+		<option value="Portugués"></option>
+		<option value="Ruso"></option>
+		<option value="Suecia"></option>
+        	<option value="Turco"></option>
+            </datalist>
+        <datalist id="niveles">
+            <option value="bajo"></option>
+            <option value="intermedio"></option>
+            <option value="alto"></option>
+        </datalist>
+        <br/> Idiomas con los que ofreces nivel alto:<input type="text" name="alto1" size="10" list="countries" />   <input type="text" name="alto2"  size="10" list="countries" /> 
+        <br/><br/> Idiomas a practicar/Nivel:<br/>
+        <input type="text" name="practicar1" size="10" list="countries" /> <input type="text" name="nivel1" size="10" list="niveles" />  <br/>
+        <input type="text" name="practicar2" size="10" list="countries" /> <input type="text" name="nivel2" size="10" list="niveles" />  <br/>
+        <input type="text" name="practicar3" size="10" list="countries" /> <input type="text" name="nivel3"  size="10" list="niveles" /> <br/> <br/>
+        ¿Cómo has conocido Pachange? / Otros comentarios: <textarea rows=15 cols=50 name="comentarios" placeholder="Comentarios,opiniones..."></textarea><br/>
+        <input type="button" name="submit" value="Enviar" />
+    </fieldset>
+</form>
+
+    <p>Es necesario rellenar todas las casillas para que tu inscripción sea válida. 
+        Al inscribirte aceptas participar en el encuentro anunciado, avisarnos en 
+        el caso de que no puedas asistir e ir conjuntamente con todo el grupo y
+        tu pareja de intercambio al sitio indicado por las organizadoras. En 
+        caso contrario, nos reservamos el derecho de la no admisión en posteriores 
+        encuentros. Recibirás un email donde te confirmamos que tienes plaza para 
+        el encuentro. Si no recibes confirmación de nosotros, no estás admitid@ y 
+        estás en lista de espera.
+    </p>
