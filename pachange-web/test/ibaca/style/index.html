@@ -110,7 +110,8 @@
           toTab = $(event.target).parent().attr("id");
           if (toTab == "info") {   }
           if (toTab == "map") {  cargarmapa() }
-          if (toTab == "subscription") { $("#principal").load("formulario.html"); }
+          if (toTab == "subscription") { $("#principal").load("partials/subscription.html"); }
+          if (toTab == "videos") { $("#principal").load("partials/videos.html"); }
         });
       });
                  
@@ -200,11 +201,12 @@
 
           <div id="sidebar" class="span4">
 
-            <h3>Próximo encuentro</h3>   
+            <h3>Menú Málaga</h3>   
             <ul id="local-menu" class="pills">
-              <li id="info" class="active"><a href="#malaga/info">Informacion General</a></li>
+              <li id="info" class="active"><a href="#malaga/info">Información General</a></li>
               <li id="map"><a href="#malaga/map">Lugar</a></li>
               <li id="subscription"><a href="#malaga/subscription">Inscripción</a></li>
+              <li id="videos"><a href="#malaga/videos">Videos</a></li>
             </ul>
             <hr />
 
