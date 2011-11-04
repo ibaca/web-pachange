@@ -40,7 +40,7 @@
 			loadOpen: true,
 			tabClose: true,
 			easing: 'easeOutQuint',
-			buttons: 'twitter,facebook,plusone,buzz' //twitter,facebook,plusone,linkedin,buzz,digg,stumbleupon,pinit
+			buttons: 'twitter,facebook,linkedin,buzz' //twitter,facebook,plusone,linkedin,buzz,digg,stumbleupon,pinit
 		};
 
 		//call in the default otions
