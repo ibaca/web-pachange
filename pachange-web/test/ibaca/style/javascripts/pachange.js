@@ -90,65 +90,38 @@ function centerAddress(map, address) {
 	});
 }
 
-function checkmail(formulario) {
-	var x = document.forms["formulario"]["email"].value;
-	var y = document.forms["formulario"]["email2"].value
-	if(x != y) {
-		formulario.setCustomValidity('Las dos direcciones de e-mail no coinciden');
-	} else {
-		formulario.setCustomValidity('');
-	}
+// Initialize check mail
+$(function(){
+  // Translate invalid HTML attr to error class
+  $("input").live("change",function(event){
+    var $i=$(event.target);
+    if ($i.is("input:invalid")) { 
+      $i.closest(".clearfix").add($i).addClass("error"); }
+    else { 
+      $i.closest(".clearfix").add($i).removeClass("error"); } 
+  });
+  // On reset, remove error class
+  $("input[type=reset]").live("click",function(event){
+    $(event.target).closest("form").find(".error").removeClass("error");
+  });
+  // Check mails
+  $("input[name=email2]").live("change",function(event){
+    var $form = $(event.target).closest("form");
+    var email = $form.find("input[name=email]");
+    var check = $form.find("input[name=email2]");
+    var elements = email.add(email.closest(".clearfix")).add(check).add(check.closest(".clearfix"));
+    if (email.val() != check.val()) { 
+      elements.addClass("error"); }
+    else { 
+      elements.removeClass("error"); }
+  });
+});
 
-}
-
-function idioma(l) {
-	$("#principal").toggleClass('evento');
-	$("#principal").removeAttr('class');
-	$("#principal").removeAttr('style');
-	//$("#principal").toggleClass('principal');
-	switch(l) {
-		case 'ingles' :
-			$.ajax({
-				url : 'ingles.html',
-				success : function(data) {
-					$('#principal').html(data);
-				}
-			});
-			break;
-		case 'español':
-			$.ajax({
-				url : 'español.html',
-				success : function(data) {
-					$('#principal').html(data);
-				}
-			});
-			break;
-		case 'aleman':
-			$.ajax({
-				url : 'aleman.html',
-				success : function(data) {
-					$('#principal').html(data);
-				}
-			});
-			break;
-	}
-}
-
-
-$(document).ready(function() {
-   $('#social-share').dcSocialShare({
-     disableFloat: true
-   });
-	//    $("#sidebar div.content").hide();
-	//    $("#sidebar div.content:first").show();
-	//    $("#sidebar h3").bind("click", function() {
-	//      if ( $(this).next().css("display") == 'none' ) {
-	//        $("#sidebar div.content").hide();
-	//        $(this).next().slideDown("slow");
-	//      }
-	//    });
-
+// Social Share initialization
+$(function() {
+   $('#social-share').dcSocialShare();
 })
+
 // Load Local/Global Menu Pills
 $(function() {
 	$("#global-menu").tabs();

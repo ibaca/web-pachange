@@ -27,7 +27,7 @@
 			centerPx: 0,
 			speedFloat: 1500,
 			speedContent: 600,
-			disableFloat: false,
+			disableFloat: true,
 			tabText: '', //<img src="images/tab_share.png" alt="Share" />
 			classTab: 'tab',
 			classOpen: 'dc-open',
