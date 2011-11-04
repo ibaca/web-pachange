@@ -6,44 +6,36 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <!-- jQuery (required for everything :P) -->
-    <script type="text/javascript" src="javascripts/jquery-1.6.4.js"></script>
+    <script src="javascripts/jquery-1.6.4.js"></script>
 
-    <!-- Twitter Bootstrap Style -->
-    <link type="text/less" rel="stylesheet/less" href="bootstrap/bootstrap.less">
-    <!-- Twitter Bootstrap (Compiler & Helpers) -->
-    <script type="text/javascript" src="bootstrap/less-1.1.3.min.js"></script>
+    <!-- Twitter Bootstrap Style & Pachange Custom Modifications -->
+    <link rel="stylesheet/less" href="stylesheets/pachange.less">
+    
+    <!-- Less Compiler (after less declarations) -->
+    <script src="bootstrap/less-1.1.3.min.js"></script>
 
     <!-- Script (plugins) -->
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="javascripts/gmap.js"></script>
-    <script type="text/javascript" src="javascripts/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="bootstrap/bootstrap-tabs.js"></script>
-    <script type="text/javascript" src="javascripts/jquery.social.share.js"></script>
-    <script type="text/javascript" src="javascripts/jquery.slimbox2.js"></script>
-    <script type="text/javascript" src="javascripts/jquery.pwi.js"></script>
-    <script type="text/javascript" src="javascripts/jquery.simpletube.js"></script>
-    
-    <!-- Stylesheets (plugins) -->
-    <link type="text/css" rel="stylesheet" href="stylesheets/jquery.slimbox2.css">
-    <link type="text/css" rel="stylesheet" href="stylesheets/jquery.pwi.css">
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="javascripts/gmap.js"></script>
+    <script src="javascripts/jquery.easing.1.3.js"></script>
+    <script src="bootstrap/bootstrap-tabs.js"></script>
+    <script src="javascripts/jquery.social.share.js"></script>
+    <script src="javascripts/jquery.slimbox2.js"></script>
+    <script src="javascripts/jquery.pwi.js"></script>
+    <script src="javascripts/jquery.simpletube.js"></script>
     
     <!-- Pachange Script & Stylesheet -->
     <script type="text/javascript" src="javascripts/pachange.js"></script>
-	<link type="text/css" rel="stylesheet" href="stylesheets/pachange.css">
     
   </head> 
   <body>
 
     <!-- brand | nav | search -->
-    <div id="header" class="topbar">
-      <div class="fill">
+    <div class="topbar">
+      <div>
         <div class="container">
 
-          <a class="brand">PACHANGE
-            <!--<img class="cabecera" src="img/header.jpg" />--> 
-            <!--<p class="logo">PACHANGE</p>-->
-            <!--<p class="sublogo">Intercambios Málaga</p>-->
-          </a>
+          <a class="brand">PACHANGE</a>
 
           <ul id="global-menu" class="nav">
             <li><a href="#!" class="active">Malaga</a></li>
@@ -51,7 +43,7 @@
             <li><a href="#!">Berlin</a></li>
           </ul>
 
-          <form action="http://www.google.com/search" class="pull-right"><!--<div id="busqueda">-->
+          <form action="http://www.google.com/search" class="search">
             <!-- Search Configuration -->
             <input type="hidden" name="ie" value="UTF-8" />
             <input type="hidden" name="oe" value="UTF-8" />
@@ -69,21 +61,20 @@
     <!-- content | footer -->
     <div class="container">
 
-      <!-- page-header | span10 | span4 -->
+      <!-- content-header | span10 | span4 -->
       <div class="content">
 
-        <div class="page-header">
+        <div class="content-header">
           <h1>Malaga <small>Informacion y contacto</small></h1>
         </div>
 
         <div class="row">
 
-          <div id="principal"  class="span10">
+          <div id="content-container">
             <!-- dynamically generated -->
           </div>
 
-           <!--<li id="videos"><a href="#malaga/videos">Videos</a></li>-->
-          <div id="sidebar" class="span4">
+          <div id="sidebar">
 
             <h3>Menú Málaga</h3>   
             <ul id="local-menu" class="pills">
@@ -96,7 +87,7 @@
             <hr />
 
             <h3>Enlaces</h3>
-            <ul class="unstyled">
+            <ul>
               <li><a href="http://www.facebook.com/group.php?gid=25897235288&ref=mf" target="_blank">Grupo Pachange en Facebook</a></li>
               <li><a href="http://es.youtube.com/results?search_query=pachange&search=Buscar" target="_blank">Pachange en YouTube</a></li>
               <li><a href="http://www.tu.tv/videos/pachange-reportaje-malaga" target="_blank">Pachange en tu.tv</a></li>
@@ -105,7 +96,7 @@
             <hr />
 
             <h3>Nuestros colaboradores</h3>
-            <ul class="unstyled">
+            <ul>
               <li><a href="http://www.malaga-si.es/" >Escuela Málaga ¡Sí!</a></li>
               <li><a href="http://www.instituto-andalusi.com/">Instituto Andalusí</a></li>
               <li><a href="http://www.aifp.org/">Spanish in Spain AIFP</a></li>
@@ -119,7 +110,7 @@
             <div id="social-share"></div>
 
             <h3>Publicidad</h3>
-            <ul class="unstyled">
+            <ul>
               <li><img alt="anuncio" src="images/banner1.gif" /></li>
               <li><img alt="anuncio" src="images/banner2.gif" /></li>
             </ul>
@@ -132,12 +123,8 @@
 
       <footer>
 
-        <div id="idiomas">
-          <p>
-            <a onclick="idioma('ingles')">English</a> |
-            <a onclick="idioma('español')"> Español</a> |
-            <a onclick="idioma('aleman')"> Deutch</a>
-          </p>
+        <div id="languages">
+          <p><a>English</a> | <a>Español</a> | <a>Deutch</a> </p>
         </div>
 
         <p>&copy; Pachange Intercambio de Idiomas 2011</p>
