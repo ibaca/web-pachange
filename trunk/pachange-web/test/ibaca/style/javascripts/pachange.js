@@ -2,8 +2,8 @@ function cargarVideo() {
 	$.ajax({
 		url : 'videos.html',
 		success : function(data) {
-			$('#principal').html(data);
-			$('#principal').youTubeChannel({
+			$('#content-container').html(data);
+			$('#content-container').youTubeChannel({
 				//Cambiar el nombre de usuario a pachange
 				userName : 'Fernan180',
 				hideNumberOfRatings : false,
@@ -41,7 +41,7 @@ function drawCalendarEvents(calendarId) {
       content = $("<div class='event'></div>");
       content.append("<h2><alt>"+fdate+"</alt>"+title+"<small>"+where+"</small></h2>");
       content.append("<p><em>"+description+"</em></p><div class='gmaps-container'></div></p>");
-      content.appendTo("#principal");
+      content.appendTo("#content-container");
 
       // Activate Google Maps
       var map = createGoogleMap(content.find(".gmaps-container")[0]);
@@ -133,7 +133,7 @@ $(function() {
 		var fromTab, toTab, partial, subtitle;
 		fromTab = $(event.relatedTarget).parent().attr("id");
 		toTab = $(event.target).parent().attr("id");
-		$("#principal").empty();
+		$("#content-container").empty();
 		switch (toTab) {
 
 			case "map-partial":
@@ -146,11 +146,11 @@ $(function() {
 				break;
 			case "videos-partial":
 				subtitle = "Galería de vídeos";
-				$("#principal").simpletube({displaytype:"user",feedid:"aquacentaur"});
+				$("#content-container").simpletube({displaytype:"user",feedid:"aquacentaur"});
 				break;
 			case "galery-partial":
 				subtitle = "Galería de fotos";
-				$("#principal").pwi({username: 'ignacio.bacamt'});
+				$("#content-container").pwi({username: 'ignacio.bacamt'});
 				break;
 			case "info-partial":
 			default:
@@ -159,8 +159,8 @@ $(function() {
 				break;
 		}
 		// Load partial and subtitle
-		if (partial) $("#principal").load(partial);
-		$(".page-header small").html(subtitle);
+		if (partial) $("#content-container").load(partial);
+		$(".content-header small").html(subtitle);
 	})
 	// Trigger info for preload
 	$("#info-partial a").click();
