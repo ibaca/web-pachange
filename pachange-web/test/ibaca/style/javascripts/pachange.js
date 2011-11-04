@@ -19,35 +19,46 @@ function cargarVideo() {
 	});
 };
 
-function drawCalendarEvents() {
-	var calendarUrl = "http://www.google.com/calendar/feeds/q1r3n14vi5icbv00ta1pjpinhc%40group.calendar.google.com/public/full?alt=json";
-	jQuery.getJSON(calendarUrl, function(data) {
-		$.each(data.feed.entry, function(i, entry) {
-			var description = entry.content.$t, link = entry.link[0].href, when = entry.gd$when[0].startTime, date = new Date(when), where = entry.gd$where[0].valueString, content;
 
-			// Generate content
-			content = $("<div></div>");
-			content.append("<h2>Evento d�a" + date.toDateString() + "</h2>");
-			content.find("h2").append("<small>" + where + "</small>");
-			content.append("<p/>").find("p").append("<div class='gmaps-container' data-where='" + where + "'></div>").append("Descipci�n: " + description + "<br>");
-			content.appendTo("#principal");
-			
-			// Activate Google Maps
-			var map = createGoogleMap(content.find(".gmaps-container")[0]);
-			centerAddress(map,where);
-			// content.find(".gmaps-container").each({
-			// markers: [{
-			// address: where,
-			// html: description+" en "+where,
-			// popup: true
-			// }]
-			// });
-			//
-			// Append to page
-			
-		});
-	});
+
+function drawCalendarEvents(calendarId) {
+
+  // migue calendar: q1r3n14vi5icbv00ta1pjpinhc%40group.calendar.google.com
+  var calendarUrl = "http://www.google.com/calendar/feeds/"+calendarId+"/public/full?alt=json";
+  jQuery.getJSON(calendarUrl, function(data) {
+    $.each(data.feed.entry, function(i, entry) {
+      var title = entry.title.$t,
+          description = entry.content.$t, 
+          link = entry.link[0].href, 
+          when = entry.gd$when[0].startTime, 
+          date = new Date(when), 
+          fdate = date.toISOString().substr(0,10),
+          where = entry.gd$where[0].valueString, 
+          content;
+
+      // Generate content
+      content = $("<div class='event'></div>");
+      content.append("<h2><alt>"+fdate+"</alt>"+title+"<small>"+where+"</small></h2>");
+      content.append("<p><em>"+description+"</em></p><div class='gmaps-container'></div></p>");
+      content.appendTo("#principal");
+
+      // Activate Google Maps
+      var map = createGoogleMap(content.find(".gmaps-container")[0]);
+      centerAddress(map, where);
+      // content.find(".gmaps-container").each({
+      // markers: [{
+      // address: where,
+      // html: description+" en "+where,
+      // popup: true
+      // }]
+      // });
+      //
+      // Append to page
+
+    });
+  });
 }
+
 
 //http://code.google.com/apis/maps/documentation/javascript/services.html#Geocoding
 
@@ -68,6 +79,7 @@ function centerAddress(map, address) {
 	}, function(results, status) {
 		if(status == google.maps.GeocoderStatus.OK) {
 			map.setCenter(results[0].geometry.location);
+			map.setZoom(12);
 			var marker = new google.maps.Marker({
 				map : map,
 				position : results[0].geometry.location
@@ -152,7 +164,7 @@ $(function() {
 
 			case "map-partial":
 				subtitle = "Próximos eventos"
-				drawCalendarEvents();
+				drawCalendarEvents("i5obi89aqj0po4faq0ndt2794c@group.calendar.google.com");
 				break;
 			case  "subscription-partial":
 				partial = "partials/subscription.html";
