@@ -72,9 +72,10 @@ body {
 	float: none;
 }
 /* Form Adjustments */
-.input-small, input.small, textarea.small, select.small {
-	width: 98px;
-}
+.input-small, input.small, textarea.small, select.small { width: 98px; }
+form:invalid{ border-color: darkred}
+form .row { margin-left: -40px; }
+
 /* Gmaps Style */
 .gmaps-container {
 	width: 560px;
