@@ -1,98 +1,81 @@
 /* Pachange */
 .page-header {
-  background-image: url("../images/page-header-background.png");
-  background-position: right;
-  background-repeat: no-repeat;
+	background-image: url("../images/page-header-background.png");
+	background-position: right;
+	background-repeat: no-repeat;
 }
 #sidebar {
 	float: right; /* FIX para evitar q se mueva mientras se carga la pagina por ajax */
 }
-
 /* Override some defaults */
 html, body {
-  background-color: #eee;
+	background-color: #eee;
 }
 body {
-  padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+	padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
 }
 .container > footer p {
-  text-align: center; /* center align it with the container */
+	text-align: center; /* center align it with the container */
 }
 .container {
-  width: 960px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+	width: 960px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
 }
-
 /* The white background content wrapper */
 .content {
-  background-color: #fff;
-  padding: 20px;
-  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-  -webkit-border-radius: 0 0 6px 6px;
-  -moz-border-radius: 0 0 6px 6px;
-  border-radius: 0 0 6px 6px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	background-color: #fff;
+	padding: 20px;
+	margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
-
 /* Page header tweaks */
 .page-header {
-  background-color: #f5f5f5;
-  padding: 20px 20px 10px;
-  margin: -20px -20px 20px;
+	background-color: #f5f5f5;
+	padding: 20px 20px 10px;
+	margin: -20px -20px 20px;
 }
-
 /* Styles you shouldn't keep as they are for displaying this base example only */
-.content .span10,
-.content .span4 {
-  min-height: 500px;
+.content .span10, .content .span4 {
+	min-height: 500px;
 }
 /* Give a quick and non-cross-browser friendly divider */
 .content .span4 {
-  margin-left: 0;
-  padding-left: 19px;
-  border-left: 1px solid #eee;
+	margin-left: 0;
+	padding-left: 19px;
+	border-left: 1px solid #eee;
 }
-
 .topbar .btn {
-  border: 0;
+	border: 0;
 }
-
 /* Social plugin */
-/*
-.dc-social-float .tab {
-  cursor: pointer;
-  height: 38px;
-  margin-left: -1px;
-}
-.dc-social-float .dc-social-float-content {
-  background-color: #f5f5f5;
-  border: 1px solid #565D60;
-  padding: 10px 0 0;
-  text-align: center;
-}
-.dc-social-float .dc-social-float-content {
-  border-radius: 5px 5px 5px 5px;
-}
-.dcssb-btn {
-  margin-bottom: 5px;
-}
-*/
-
 .dc-social-float-content > div {
-  width: 80px; display: inline-block;
+	width: 80px;
+	display: inline-block;
+}
+/* Galery */
+.pwi_album {
+	display: inline-block;
+	margin: 0 10px 20px 0;
+}
+.pwi_photo {
+	display: inline-block;
+	width: 77px;
 }
 
 /* Pills Adjustments */
-.pills > li { float: none; }
-
+.pills > li {
+	float: none;
+}
 /* Form Adjustments */
 .input-small, input.small, textarea.small, select.small {
-  width: 98px;
+	width: 98px;
 }
-
 /* Gmaps Style */
 .gmaps-container {
-  width: 680px;
-  height: 350px;
+	width: 680px;
+	height: 350px;
 }
