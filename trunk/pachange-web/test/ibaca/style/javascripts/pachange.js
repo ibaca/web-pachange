@@ -27,9 +27,9 @@ function drawCalendarEvents() {
 
 			// Generate content
 			content = $("<div></div>");
-			content.append("<h2>Evento día" + date.toDateString() + "</h2>");
+			content.append("<h2>Evento dï¿½a" + date.toDateString() + "</h2>");
 			content.find("h2").append("<small>" + where + "</small>");
-			content.append("<p/>").find("p").append("<div class='gmaps-container' data-where='" + where + "'></div>").append("Descipción: " + description + "<br>");
+			content.append("<p/>").find("p").append("<div class='gmaps-container' data-where='" + where + "'></div>").append("Descipciï¿½n: " + description + "<br>");
 			content.appendTo("#principal");
 			
 			// Activate Google Maps
@@ -124,21 +124,9 @@ function idioma(l) {
 
 
 $(document).ready(function() {
-	//    $('#social').dcSocialShare({
-	//      buttons: "twitter,facebook,plusone",
-	//      location: 'top',
-	//      align: 'left',
-	//      offsetLocation: 50,
-	//      offsetAlign: 30,
-	//      tabText: '',
-	//      width: 120,
-	//      center: true,
-	//      centerPx: 577,
-	//      size:   "vertical",
-	//      speedContent: 600,
-	//      speedFloat: 1600,
-	//      disableFloat: true
-	//    });
+   $('#social-share').dcSocialShare({
+     disableFloat: true
+   });
 	//    $("#sidebar div.content").hide();
 	//    $("#sidebar div.content:first").show();
 	//    $("#sidebar h3").bind("click", function() {

@@ -1,11 +1,11 @@
 /*
  * DC jQuery Social Share Buttons
  * Copyright (c) 2011 Design Chemical
+ * http://www.designchemical.com/lab/jquery-plugin-social-share-buttons/getting-started/
  *
  * Dual licensed under the MIT and GPL licenses:
  * 	http://www.opensource.org/licenses/mit-license.php
  * 	http://www.gnu.org/licenses/gpl.html
- *
  */
 
 (function($){
@@ -17,29 +17,30 @@
 		var defaults = {
 			classWrapper: 'dc-social-float',
 			classContent: 'dc-social-float-content',
-			width: 70,
+			width: '100%',
 			idWrapper: 'dc-social-float-'+$(this).index(),
 			location: 'top', // top, bottom
 			align: 'left', // left, right
-			offsetLocation: 50,
-			offsetAlign: 50,
+			offsetLocation: 0,
+			offsetAlign: 0,
 			center: false,
 			centerPx: 0,
 			speedFloat: 1500,
 			speedContent: 600,
 			disableFloat: false,
-			tabText: '<img src="images/tab_share.png" alt="Share" />',
+			tabText: '', //<img src="images/tab_share.png" alt="Share" />
 			classTab: 'tab',
 			classOpen: 'dc-open',
 			classClose: 'dc-close',
 			classToggle: 'dc-toggle',
 			twitterId: '',
+			image: '',
 			size: 'vertical',
 			autoClose: false,
 			loadOpen: true,
 			tabClose: true,
 			easing: 'easeOutQuint',
-			buttons: 'twitter,facebook,plusone,linkedin,buzz,digg,stumbleupon'
+			buttons: 'twitter,facebook,plusone,buzz' //twitter,facebook,plusone,linkedin,buzz,digg,stumbleupon,pinit
 		};
 
 		//call in the default otions
@@ -66,10 +67,11 @@
 			var linkOpen = $('.'+defaults.classOpen);
 			var linkClose = $('.'+defaults.classClose);
 			var linkToggle = $('.'+defaults.classToggle);
-			var cssPos = defaults.disableFloat == false ? 'absolute' : 'fixed' ;
+			var cssPos = defaults.disableFloat == false ? 'absolute' : 'initial' ;
 			var url = document.URL;
 			var encurl = encodeURI(url);
 			var size = defaults.size;
+			var image = defaults.image;
 			var title = jQuery(this).attr('title');
 			var description = $('meta[name=description]').attr("content");
 			
@@ -240,7 +242,7 @@
 					}
 					var $appId = '';
 					var $size = 'box_count';
-					$button = '<div class="dcssb-btn dcssb-facebook"><iframe src="http://www.facebook.com/plugins/like.php?app_id='+$appId+'&amp;href='+encurl+'&amp;send=false&amp;layout='+btn+'&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height='+fbheight+'" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:'+fbheight+'px;" allowTransparency="true"></iframe></div>';					
+					$button = '<div class="dcssb-btn dcssb-facebook"><iframe src="http://www.facebook.com/plugins/like.php?app_id='+$appId+'&amp;href='+encurl+'&amp;send=false&amp;layout='+btn+'&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height='+fbheight+'" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:'+fbheight+'px;" allowTransparency="true"></iframe></div>';					
 					break;
 					
 					case 'plusone': 
@@ -263,8 +265,7 @@
 					} else if(size == 'horizontal'){
 						btn = 'small-count';
 					}
-					var $image_default = '';
-					$button = '<div class="dcssb-btn dcssb-buzz"><a href="http://www.google.com/buzz/post" class="google-buzz-button" title="Google Buzz" data-message="'+title+'" data-url="'+url+'" data-imageurl="'+$image_default+'" data-button-style="'+btn+'"></a><script type="text/javascript" src="http://www.google.com/buzz/api/button.js"></script></div>';
+					$button = '<div class="dcssb-btn dcssb-buzz"><a href="http://www.google.com/buzz/post" class="google-buzz-button" title="Google Buzz" data-message="'+title+'" data-url="'+url+'" data-imageurl="'+image+'" data-button-style="'+btn+'"></a><script type="text/javascript" src="http://www.google.com/buzz/api/button.js"></script></div>';
 					break;
 					
 					case 'linkedin': 
@@ -295,13 +296,21 @@
 						btn = 'DiggCompact';
 					}
 					$button = '<script type="text/javascript">(function() {var s = document.createElement("SCRIPT"), s1 = document.getElementsByTagName("SCRIPT")[0]; s.type = "text/javascript"; s.async = true; s.src = "http://widgets.digg.com/buttons.js"; s1.parentNode.insertBefore(s, s1); })(); </script><div class="dcssb-btn dcssb-digg"><a href="http://digg.com/submit?url='+encurl+'&amp;title='+title+'" class="DiggThisButton '+btn+'"></a><span style="display: none;">'+description+'</span></div>';
-					
 					break;
+					
+					case 'pinit': 
+					btn = 'none';
+					if(size == 'vertical'){
+						btn = 'vertical';
+					} else if(size == 'horizontal'){
+						btn = 'horizontal';
+					}
+					$button = '<div class="dcssb-btn dcssb-pinit"><a href="http://pinterest.com/pin/create/button/?url='+encurl+'&amp;media='+encodeURI(image)+'&amp;description='+description+'" class="pin-it-button" count-layout="'+btn+'">Pin It</a></div><script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script>';
+					break;
+					
 				}
-				
 				$content.append($button);
 			}
-		
 		});
 	};
 })(jQuery);

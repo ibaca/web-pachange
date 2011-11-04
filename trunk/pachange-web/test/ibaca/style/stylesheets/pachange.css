@@ -59,6 +59,7 @@ body {
 }
 
 /* Social plugin */
+/*
 .dc-social-float .tab {
   cursor: pointer;
   height: 38px;
@@ -76,8 +77,10 @@ body {
 .dcssb-btn {
   margin-bottom: 5px;
 }
-#social.dc-social-float-content {
-  width: 80px;
+*/
+
+.dc-social-float-content > div {
+  width: 80px; display: inline-block;
 }
 
 /* Pills Adjustments */
