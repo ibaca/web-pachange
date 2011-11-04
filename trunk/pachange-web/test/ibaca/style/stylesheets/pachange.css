@@ -73,8 +73,12 @@ body {
 }
 /* Form Adjustments */
 .input-small, input.small, textarea.small, select.small { width: 98px; }
-form:invalid{ border-color: darkred}
 form .row { margin-left: -40px; }
+form.form-stacked div.clearfix.error { 
+    padding-top: 3px; padding-bottom: 7px; padding-left: 10px;
+    margin-top: -3px; margin-left: -10px; margin-bottom: 2px; 
+}
+
 
 /* Gmaps Style */
 .gmaps-container {
