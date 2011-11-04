@@ -22,10 +22,11 @@ function cargarVideo() {
 
 
 function drawCalendarEvents(calendarId) {
-
+  jQuery.support.cors = true; //FIX problema IE9 no carga mapas
+  // Mas info en http://stackoverflow.com/questions/5241088/jquery-call-to-webservice-returns-no-transport-error
   // migue calendar: q1r3n14vi5icbv00ta1pjpinhc%40group.calendar.google.com
   var calendarUrl = "http://www.google.com/calendar/feeds/"+calendarId+"/public/full?alt=json";
-  jQuery.getJSON(calendarUrl, function(data) {
+  $.getJSON(calendarUrl, function(data) {
     $.each(data.feed.entry, function(i, entry) {
       var title = entry.title.$t,
           description = entry.content.$t, 
