@@ -147,11 +147,11 @@ $(function() {
 		var fromTab, toTab, partial, subtitle;
 		fromTab = $(event.relatedTarget).parent().attr("id");
 		toTab = $(event.target).parent().attr("id");
+		$("#principal").empty();
 		switch (toTab) {
 
 			case "map-partial":
-				partial = "partials/map.html";
-				subtitle = "Próximo evento"
+				subtitle = "Próximos eventos"
 				drawCalendarEvents();
 				break;
 			case  "subscription-partial":
@@ -160,8 +160,12 @@ $(function() {
 				break;
 			case "videos-partial":
 				partial = "partials/videos.html";
-				subtitle = "Galería de vídeos"
+				subtitle = "Galería de vídeos";
 				break;
+			case "galery-partial":
+				subtitle = "Galería de fotos";
+				$("#principal").pwi({username: 'ignacio.bacamt'});
+				return;
 			case "info-partial":
 			default:
 				partial = "partials/info.html";
@@ -169,7 +173,7 @@ $(function() {
 				break;
 		}
 		// Load partial and subtitle
-		$("#principal").load(partial);
+		if (partial) $("#principal").load(partial);
 		$(".page-header small").html(subtitle);
 	})
 	// Trigger info for preload
