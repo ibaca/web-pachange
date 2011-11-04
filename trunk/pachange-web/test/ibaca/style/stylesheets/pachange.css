@@ -41,6 +41,9 @@ body {
 .topbar .btn {
 	border: 0;
 }
+/* Events */
+.event h2 alt { color: #BFBFBF; margin-right: 6px; font-size: medium; }
+.event h2 small { margin-left: 6px; }
 /* Social plugin */
 .dc-social-float-content > div {
 	width: 80px;
