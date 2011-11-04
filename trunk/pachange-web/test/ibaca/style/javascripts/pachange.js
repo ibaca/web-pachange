@@ -159,13 +159,13 @@ $(function() {
 				subtitle = "Suscripción a próximo evento"
 				break;
 			case "videos-partial":
-				partial = "partials/videos.html";
 				subtitle = "Galería de vídeos";
+				$("#principal").simpletube({displaytype:"user",feedid:"aquacentaur"});
 				break;
 			case "galery-partial":
 				subtitle = "Galería de fotos";
 				$("#principal").pwi({username: 'ignacio.bacamt'});
-				return;
+				break;
 			case "info-partial":
 			default:
 				partial = "partials/info.html";
