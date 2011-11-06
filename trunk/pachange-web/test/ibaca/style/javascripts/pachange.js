@@ -1,5 +1,11 @@
 // Load Local/Global Menu Pills
 $(function() {
+  var calendarReference = pachange.calendarReference;
+  var subscriptionPartial = pachange.subscriptionPartial;
+  var infoPartial = pachange.infoPartial;
+  var videosReference = pachange.videosReference;
+  var photosReference = pachange.photosReference;
+  
 	$("#global-menu").tabs();
 	$("#local-menu").pills();
 
@@ -13,23 +19,23 @@ $(function() {
 
 			case "map-partial":
 				subtitle = "Próximos eventos"
-				drawCalendarEvents("i5obi89aqj0po4faq0ndt2794c@group.calendar.google.com");
+				drawCalendarEvents(calendarReference);
 				break;
 			case  "subscription-partial":
-				partial = "partials/subscription.html";
+				partial = subscriptionPartial;
 				subtitle = "Suscripción a próximo evento"
 				break;
 			case "videos-partial":
 				subtitle = "Galería de vídeos";
-				$("#content-container").simpletube({displaytype:"user",feedid:"aquacentaur"});
+				$("#content-container").simpletube({displaytype: "user",feedid: videosReference});
 				break;
 			case "galery-partial":
 				subtitle = "Galería de fotos";
-				$("#content-container").pwi({username: 'ignacio.bacamt'});
+				$("#content-container").pwi({username: photosReference});
 				break;
 			case "info-partial":
 			default:
-				partial = "partials/info.html";
+				partial = infoPartial;
 				subtitle = "Información y contacto"
 				break;
 		}
@@ -39,6 +45,21 @@ $(function() {
 	})
 	// Trigger info for preload
 	$("#info-partial a").click();
+});
+// Generate Configurable Sidebar Elements
+$(function(){
+  var ulLinks = $("#sidebar-links");
+  $.each(pachange.links,function(i,link){
+    ulLinks.append("<li><a href='"+link.href+"' target='_blank'>"+link.text+"</a></li>");
+  });
+  var ulPartners = $("#sidebar-partners");
+  $.each(pachange.partners,function(i,partner){
+    ulPartners.append("<li><a href='"+partner.href+"' target='_blank'>"+partner.text+"</a></li>");
+  });
+  var ulBanners = $("#sidebar-banners");
+  $.each(pachange.banners,function(i,banner){
+    ulBanners.append("<li><img alt='"+banner.text+"' src='"+banner.src+"' /></li>");
+  });
 });
 
 // Initialize check mail
