@@ -1,0 +1,1 @@
+Proyecto desarrollado para realizar el proyecto del máster INFTEL IX, como parte del módulo Conceptos y Recursos de Internet. Que consiste en aplicar lo aprendido para la mejora de la web de grupo social universitario Pachange.
